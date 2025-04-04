@@ -4,7 +4,7 @@ import torchvision.models as models
 from dataset import group_1, group_2, group_3
 
 class GroupKeypointModel(nn.Module):
-    def __init__(self, backbone_name='efficientnet_b7'):
+    def __init__(self, backbone_name):
         super(GroupKeypointModel, self).__init__()
         
         # Инициализируем бэкбон в зависимости от выбранной модели

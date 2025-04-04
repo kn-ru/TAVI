@@ -8,8 +8,8 @@ import cv2
 from PIL import Image
 
 # Пути к данным
-original_image_size = (1024, 1024)  # Исходное разрешение изображений
-image_size = (512, 512)  # Новое разрешение изображений
+original_image_size = (512, 512)  # Исходное разрешение изображений
+image_size = (512, 512)  # Разрешение изображений для обработки
 
 # Классы ключевых точек
 group_1 = ["CP"]  # Проксимальный конец катетера (1 точка)
@@ -189,12 +189,13 @@ class TAVIDataset(Dataset):
         self.transform = transform
         self.mode = mode
         
-        # Определяем, какие папки использовать для обучения и валидации
-        all_folders = sorted(glob.glob(os.path.join(root_dataset, "*")))
-        if mode == 'train':
-            folders = all_folders[:int(0.8 * len(all_folders))]  # 80% для обучения
-        else:
-            folders = all_folders[int(0.8 * len(all_folders)):]  # 20% для валидации
+        # Используем предварительно разделенные данные
+        mode_folder = os.path.join(root_dataset, mode)
+        if not os.path.exists(mode_folder):
+            raise ValueError(f"Папка {mode_folder} не найдена. Убедитесь, что датасет содержит папки 'train' и 'val'.")
+        
+        folders = sorted(glob.glob(os.path.join(mode_folder, "*")))
+        print(f"Загружаем данные из {mode_folder}, найдено папок: {len(folders)}")
 
         for case_folder in folders:
             if not os.path.isdir(case_folder):
@@ -215,6 +216,8 @@ class TAVIDataset(Dataset):
                 if os.path.exists(img_path):
                     self.image_paths.append(img_path)
                     self.json_paths.append(json_file)
+        
+        print(f"Загружено {len(self.image_paths)} изображений из папки {mode}")
 
     def __len__(self):
         return len(self.image_paths)

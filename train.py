@@ -48,9 +48,20 @@ def train(config):
     print(f"Training samples: {len(train_dataset)}, Validation samples: {len(val_dataset)}")
 
     # Создаем модель с независимыми головами для групп
-    model = GroupKeypointModel()
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    # Создаем модель с использованием backbone_name из конфигурационного файла
+    backbone_name = config.get('backbone_name', 'resnet18')  # Используем resnet18 по умолчанию
+    print(f"Используемая модель бэкбона: {backbone_name}")
+    model = GroupKeypointModel(backbone_name=backbone_name)
+    
+    # Проверяем доступность GPU и достаточность памяти
+    use_cuda = torch.cuda.is_available()
+    device = torch.device("cuda" if use_cuda else "cpu")
     print(f"Используется устройство: {device}")
+    
+    # Если используется CUDA, выводим информацию о доступной памяти
+    if use_cuda:
+        print(f"Доступная память GPU: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GB")
+    
     model.to(device)
 
     # Оптимизатор и функции потерь
