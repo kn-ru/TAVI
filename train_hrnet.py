@@ -1,5 +1,6 @@
 import os
 import yaml
+import time
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -7,8 +8,9 @@ from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 import matplotlib
 matplotlib.use('Agg')  # Используем Agg бэкенд для работы без GUI
+import matplotlib.pyplot as plt
 
-from dataset import KeypointDataset
+from dataset import TAVIDataset
 from hrnet_model import HRNetKeypointModel
 from losses import KeypointLoss
 from visualization import create_batch_visualization
@@ -16,21 +18,15 @@ from visualization import create_batch_visualization
 def train(config):
     # Создаем директории для сохранения результатов
     os.makedirs(config['checkpoint_dir'], exist_ok=True)
-    if config['visualization']['save_batch_images']:
-        os.makedirs(config['visualization']['output_dir'], exist_ok=True)
+    
+    # Создаем директорию для визуализаций, если она включена
+    if config.get('visualization', {}).get('save_batch_images', False):
+        vis_dir = config.get('visualization', {}).get('output_dir', 'visualizations')
+        os.makedirs(vis_dir, exist_ok=True)
     
     # Инициализируем датасеты и загрузчики данных
-    train_dataset = KeypointDataset(
-        config['train_dir'],
-        augmentation=True,
-        img_size=config['img_size']
-    )
-    
-    val_dataset = KeypointDataset(
-        config['val_dir'],
-        augmentation=False,
-        img_size=config['img_size']
-    )
+    train_dataset = TAVIDataset(config['dataset_path'], mode='train')
+    val_dataset = TAVIDataset(config['dataset_path'], mode='val')
     
     train_loader = DataLoader(
         train_dataset,
@@ -81,6 +77,7 @@ def train(config):
     
     # Основной цикл обучения
     for epoch in range(1, config['epochs'] + 1):
+        epoch_start_time = time.time()
         # Обучение
         model.train()
         train_loss = 0.0
@@ -88,46 +85,54 @@ def train(config):
         train_coord_loss = 0.0
         train_group_loss = 0.0
         
-        for batch_idx, (images, keypoints, group_labels) in enumerate(train_loader):
+        for batch_idx, (images, keypoints) in enumerate(train_loader):
             images = images.to(device)
             keypoints = keypoints.to(device)
-            group_labels = group_labels.to(device)
+            
+            # В TAVIDataset нет group_labels, поэтому создаем заглушку
+            # Создаем тензор с нулями размера [batch_size, 3]
+            group_labels = torch.zeros(images.size(0), 3, device=device)
             
             optimizer.zero_grad()
             
             outputs = model(images)  # Словарь с выходами модели
             
-            loss, loss_components = criterion(outputs, keypoints, group_labels)
+            loss_dict = criterion(outputs, keypoints, group_labels)
             
+            loss = loss_dict['total']
             loss.backward()
             optimizer.step()
             
             train_loss += loss.item()
-            train_presence_loss += loss_components['presence_loss']
-            train_coord_loss += loss_components['coord_loss']
-            train_group_loss += loss_components['group_loss']
+            train_presence_loss += loss_dict['presence'].item()
+            train_coord_loss += loss_dict['coord'].item()
+            train_group_loss += loss_dict['group'].item()
             
             # Выводим информацию о процессе обучения
             if (batch_idx + 1) % 20 == 0:
                 print(f"Эпоха {epoch}/{config['epochs']} [{batch_idx+1}/{len(train_loader)}] "
                       f"Потеря: {loss.item():.4f} "
-                      f"(П: {loss_components['presence_loss']:.4f}, "
-                      f"К: {loss_components['coord_loss']:.4f}, "
-                      f"Г: {loss_components['group_loss']:.4f})")
+                      f"(П: {loss_dict['presence'].item():.4f}, "
+                      f"К: {loss_dict['coord'].item():.4f}, "
+                      f"Г: {loss_dict['group'].item():.4f})")
             
             # Сохраняем визуализацию первого батча в каждой эпохе
-            if batch_idx == 0 and config['visualization']['save_batch_images']:
-                batch_vis = create_batch_visualization(
+            if batch_idx == 0 and config.get('visualization', {}).get('save_batch_images', False):
+                vis_dir = config.get('visualization', {}).get('output_dir', 'visualizations')
+                vis_path = os.path.join(vis_dir, f'epoch_{epoch}_hrnet.png')
+                
+                create_batch_visualization(
                     images.cpu(),
                     keypoints.cpu(),
                     outputs['keypoints'].detach().cpu(),
-                    max_images=config['visualization']['max_images']
+                    save_path=vis_path,
+                    max_images=config.get('visualization', {}).get('max_images', 16)
                 )
-                vis_path = os.path.join(config['visualization']['output_dir'], f'epoch_{epoch}_hrnet.png')
-                batch_vis.savefig(vis_path)
                 
                 # Добавляем изображение в TensorBoard
-                writer.add_figure('Batch Visualization', batch_vis, epoch)
+                # Загружаем сохраненное изображение и добавляем его в TensorBoard
+                img = plt.imread(vis_path)
+                writer.add_image('Batch Visualization', img.transpose(2, 0, 1), epoch)
         
         # Вычисляем средние потери за эпоху
         train_loss /= len(train_loader)
@@ -143,25 +148,31 @@ def train(config):
         val_group_loss = 0.0
         
         with torch.no_grad():
-            for images, keypoints, group_labels in val_loader:
+            for images, keypoints in val_loader:
                 images = images.to(device)
                 keypoints = keypoints.to(device)
-                group_labels = group_labels.to(device)
+                
+                # В TAVIDataset нет group_labels, поэтому создаем заглушку
+                # Создаем тензор с нулями размера [batch_size, 3]
+                group_labels = torch.zeros(images.size(0), 3, device=device)
                 
                 outputs = model(images)
                 
-                loss, loss_components = criterion(outputs, keypoints, group_labels)
+                loss_dict = criterion(outputs, keypoints, group_labels)
                 
-                val_loss += loss.item()
-                val_presence_loss += loss_components['presence_loss']
-                val_coord_loss += loss_components['coord_loss']
-                val_group_loss += loss_components['group_loss']
+                val_loss += loss_dict['total'].item()
+                val_presence_loss += loss_dict['presence'].item()
+                val_coord_loss += loss_dict['coord'].item()
+                val_group_loss += loss_dict['group'].item()
         
         # Вычисляем средние потери за эпоху
         val_loss /= len(val_loader)
         val_presence_loss /= len(val_loader)
         val_coord_loss /= len(val_loader)
         val_group_loss /= len(val_loader)
+        
+        # Вычисляем время выполнения эпохи
+        epoch_time = time.time() - epoch_start_time
         
         # Обновляем планировщик скорости обучения
         scheduler.step(val_loss)

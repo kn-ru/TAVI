@@ -8,14 +8,15 @@ import cv2
 from PIL import Image
 
 # Пути к данным
-original_image_size = (1024, 1024)  # Исходное разрешение изображений
-image_size = (512, 512)  # Новое разрешение изображений
+original_image_size = (512, 512)  # Исходное разрешение изображений
+image_size = (512, 512)  # Разрешение изображений для модели
 
 # Классы ключевых точек
-group_1 = ["CP"]  # Проксимальный конец катетера (1 точка)
+# Добавляем варианты с русской буквой С и английской C
+group_1 = ["CP", "СP"]  # Проксимальный конец катетера (1 точка)
 group_2 = ["FE2_o", "FE1_o", "FE2", "FE1", "EC1", "EC2"]  # Синотубулярное соединение (много точек)
-group_3 = ["CT1", "CT2", "CD"]  # Дистальный конец катетера и конец катетера (от 0 до 3 точек)
-ignore_classes = ["CM"]  # Мусорные точки (не учитывать)
+group_3 = ["CT1", "СT1", "CT2", "СT2", "CD", "СD"]  # Дистальный конец катетера и конец катетера (от 0 до 3 точек)
+ignore_classes = ["CM", "СM"]  # Мусорные точки (не учитывать)
 
 # Все классы точек
 all_keypoint_classes = group_1 + group_2 + group_3
@@ -34,6 +35,7 @@ contrast_range = (0.8, 1.2)    # Диапазон изменения контр�
 
 
 def get_affine_transform(center, scale, rot, output_size):
+    """Получает матрицу аффинного преобразования для изменения размера и поворота изображения"""
     if not isinstance(scale, np.ndarray) and not isinstance(scale, list):
         scale = np.array([scale, scale])
     scale_tmp = scale * 200.0
@@ -56,14 +58,19 @@ def get_affine_transform(center, scale, rot, output_size):
     src[2:, :] = get_3rd_point(src[0, :], src[1, :])
     dst[2:, :] = get_3rd_point(dst[0, :], dst[1, :])
 
+    # Получаем матрицу преобразования из исходных точек в целевые
     trans = cv2.getAffineTransform(np.float32(src), np.float32(dst))
 
     return trans
 
 
 def affine_transform(pt, t):
+    """Применяет аффинное преобразование к точке"""
+    # Добавляем третью координату для матричного умножения
     new_pt = np.array([pt[0], pt[1], 1.])
+    # Применяем матрицу преобразования
     new_pt = np.dot(t, new_pt)
+    # Возвращаем только x и y координаты
     return new_pt[:2]
 
 
@@ -159,24 +166,46 @@ def extract_points_from_json(json_path):
     # Формат: [presence, x, y] для каждой точки
     keypoints = np.zeros((num_keypoints, 3), dtype=np.float32)
     
+    # Создаем словарь для отображения классов с русскими/английскими буквами на стандартные классы
+    class_mapping = {
+        # Для группы 1
+        "CP": "CP", "СP": "CP",
+        # Для группы 2 - оставляем как есть, так как там нет путаницы с буквами
+        "FE2_o": "FE2_o", "FE1_o": "FE1_o", "FE2": "FE2", "FE1": "FE1", "EC1": "EC1", "EC2": "EC2",
+        # Для группы 3
+        "CT1": "CT1", "СT1": "CT1",
+        "CT2": "CT2", "СT2": "CT2",
+        "CD": "CD", "СD": "CD",
+        # Игнорируемые классы
+        "CM": "CM", "СM": "CM"
+    }
+    
     # Заполняем массив данными из JSON
     for obj in data["objects"]:
         class_name = obj["classTitle"]
-        if class_name in ignore_classes:
-            continue  # Пропускаем мусорные точки
         
-        if class_name in all_keypoint_classes:
-            idx = all_keypoint_classes.index(class_name)
-            x, y = obj["points"]["exterior"][0]
+        # Приводим класс к стандартному виду, если он есть в маппинге
+        if class_name in class_mapping:
+            standard_class = class_mapping[class_name]
             
-            # Нормализуем координаты к [0, 1]
-            x_norm = x / original_image_size[1]
-            y_norm = y / original_image_size[0]
+            # Пропускаем мусорные точки
+            if standard_class in ignore_classes:
+                continue
             
-            # Устанавливаем наличие точки и её координаты
-            keypoints[idx, 0] = 1.0  # presence flag
-            keypoints[idx, 1] = x_norm  # normalized x
-            keypoints[idx, 2] = y_norm  # normalized y
+            # Проверяем, есть ли класс в списке всех классов
+            if standard_class in all_keypoint_classes:
+                idx = all_keypoint_classes.index(standard_class)
+                x, y = obj["points"]["exterior"][0]
+                
+                # Нормализуем координаты к [0, 1]
+                # Теперь original_image_size = (512, 512)
+                x_norm = x / original_image_size[1]
+                y_norm = y / original_image_size[0]
+                
+                # Устанавливаем наличие точки и её координаты
+                keypoints[idx, 0] = 1.0  # presence flag
+                keypoints[idx, 1] = x_norm  # normalized x
+                keypoints[idx, 2] = y_norm  # normalized y
     
     return keypoints
 
@@ -189,12 +218,14 @@ class TAVIDataset(Dataset):
         self.transform = transform
         self.mode = mode
         
-        # Определяем, какие папки использовать для обучения и валидации
-        all_folders = sorted(glob.glob(os.path.join(root_dataset, "*")))
-        if mode == 'train':
-            folders = all_folders[:int(0.8 * len(all_folders))]  # 80% для обучения
-        else:
-            folders = all_folders[int(0.8 * len(all_folders)):]  # 20% для валидации
+        # Используем новый путь к предварительно разделенному датасету 512x512
+        root_dataset = "/home/knru/80lab/Gergent/TAVI_new/TAVI_512_split/"
+        
+        # Выбираем папку в зависимости от режима (train или val)
+        mode_folder = os.path.join(root_dataset, mode)
+        
+        # Получаем все папки внутри train или val
+        folders = sorted(glob.glob(os.path.join(mode_folder, "*")))
 
         for case_folder in folders:
             if not os.path.isdir(case_folder):
@@ -229,6 +260,16 @@ class TAVIDataset(Dataset):
         
         # Получаем координаты ключевых точек
         keypoints = extract_points_from_json(json_path)
+        
+        # Создаем короткие пути для визуализации
+        # Например, из /home/knru/80lab/Gergent/TAVI_new/321814_Tavi_detection/0001/img/0001_001_001.png
+        # получаем 0001/img/0001_001_001.png
+        parts_img = img_path.split('/')
+        try:
+            folder_idx = parts_img.index('img')
+            short_img_path = '/'.join(parts_img[folder_idx-1:])
+        except ValueError:
+            short_img_path = os.path.basename(img_path)
         
         # Применяем аугментации, если нужно
         if self.transform and self.mode == 'train':
@@ -276,11 +317,16 @@ class TAVIDataset(Dataset):
             for i in range(num_keypoints):
                 if keypoints[i, 0] > 0:  # Если точка присутствует
                     # Денормализуем координаты обратно в пиксели
+                    # Теперь original_image_size = (512, 512)
                     x = keypoints[i, 1] * original_image_size[1]
                     y = keypoints[i, 2] * original_image_size[0]
                     
                     # Применяем аффинное преобразование
-                    x, y = affine_transform([x, y], trans)
+                    # Используем ту же матрицу преобразования, что и для изображения
+                    pt = np.array([x, y])
+                    new_pt = np.array([pt[0], pt[1], 1.])
+                    new_pt = np.dot(trans, new_pt)
+                    x, y = new_pt[:2]
                     
                     # Нормализуем обратно в диапазон [0, 1]
                     keypoints[i, 1] = x / image_size[1]
@@ -292,6 +338,9 @@ class TAVIDataset(Dataset):
         else:
             # Просто изменяем размер изображения без аугментаций
             image = cv2.resize(image, (image_size[1], image_size[0]))
+            
+            # Также масштабируем координаты точек без дополнительных преобразований
+            # Координаты уже нормализованы в диапазоне [0, 1], поэтому не требуют дополнительного масштабирования
         
         # Нормализуем изображение
         image = image.astype(np.float32) / 255.0
@@ -301,4 +350,5 @@ class TAVIDataset(Dataset):
         image = torch.from_numpy(image).float().permute(2, 0, 1)
         keypoints = torch.from_numpy(keypoints).float()
         
-        return image, keypoints
+        # Возвращаем также путь к изображению
+        return image, keypoints, short_img_path

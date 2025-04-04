@@ -27,6 +27,9 @@ checkpoints/
 *.jpeg
 *.gif
 
+# Исключения - разрешаем пушить sample.png
+!sample.png
+
 # Virtual environment
 venv/
 env/

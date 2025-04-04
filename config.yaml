@@ -1,5 +1,5 @@
-# Путь к датасету
-dataset_path: "/home/knru/80lab/Gergent/TAVI_new/321814_Tavi_detection/"
+# Путь к предварительно разделенному датасету
+dataset_path: "/home/knru/80lab/Gergent/TAVI_new/TAVI_512_split/"
 
 # Параметры обучения
 batch_size: 8
@@ -33,3 +33,13 @@ visualization:
 
 # Название эксперимента для TensorBoard
 experiment_name: "keypoint_detection_v2"
+
+# Параметры для модели с тепловыми картами (heatmap)
+heatmap_size: [64, 64]  # Размер тепловой карты (H, W)
+gaussian_sigma: 2.0     # Стандартное отклонение для гауссова распределения
+use_focal_loss: true    # Использовать Focal Loss вместо MSE для тепловых карт
+focal_alpha: 2.0        # Параметр alpha для Focal Loss
+focal_beta: 4.0         # Параметр beta для Focal Loss
+
+# Директория для сохранения результатов тестирования
+results_dir: "results"

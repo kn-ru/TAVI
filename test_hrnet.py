@@ -9,7 +9,7 @@ matplotlib.use('Agg')  # Используем Agg бэкенд для работ
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 
-from dataset import KeypointDataset
+from dataset import TAVIDataset
 from hrnet_model import HRNetKeypointModel
 from visualization import create_batch_visualization
 
@@ -67,11 +67,7 @@ def calculate_metrics(pred_keypoints, gt_keypoints, distance_threshold=0.05):
 
 def test(config):
     # Инициализируем тестовый датасет
-    test_dataset = KeypointDataset(
-        config['test_dir'],
-        augmentation=False,
-        img_size=config['img_size']
-    )
+    test_dataset = TAVIDataset(config['dataset_path'], mode='val')  # Используем валидационный набор для тестирования
     
     test_loader = DataLoader(
         test_dataset,
@@ -111,9 +107,11 @@ def test(config):
     
     # Проходим по тестовому датасету
     with torch.no_grad():
-        for batch_idx, (images, keypoints, group_labels) in enumerate(tqdm(test_loader, desc="Testing")):
+        for batch_idx, (images, keypoints) in enumerate(tqdm(test_loader, desc="Testing")):
             images = images.to(device)
             keypoints = keypoints.to(device)
+            
+            # В TAVIDataset нет group_labels, поэтому мы его не используем
             
             # Получаем предсказания модели
             outputs = model(images)
@@ -124,16 +122,15 @@ def test(config):
             all_metrics.append(batch_metrics)
             
             # Сохраняем визуализацию для первых нескольких батчей
-            if batch_idx < config['visualization']['max_batches']:
-                batch_vis = create_batch_visualization(
+            if batch_idx < config.get('visualization', {}).get('max_batches', 5):
+                vis_path = os.path.join(results_dir, f'batch_{batch_idx}_hrnet.png')
+                create_batch_visualization(
                     images.cpu(),
                     keypoints.cpu(),
                     pred_keypoints.cpu(),
-                    max_images=config['visualization']['max_images']
+                    save_path=vis_path,
+                    max_images=config.get('visualization', {}).get('max_images', 16)
                 )
-                vis_path = os.path.join(results_dir, f'batch_{batch_idx}_hrnet.png')
-                batch_vis.savefig(vis_path)
-                plt.close(batch_vis)
     
     # Вычисляем средние метрики
     avg_metrics = {
