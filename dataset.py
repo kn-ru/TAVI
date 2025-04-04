@@ -219,7 +219,7 @@ class TAVIDataset(Dataset):
         self.mode = mode
         
         # Используем новый путь к предварительно разделенному датасету 512x512
-        root_dataset = "/home/knru/80lab/Gergent/TAVI_new/TAVI_512_split/"
+        root_dataset = "ххххххххххххххххххххх"
         
         # Выбираем папку в зависимости от режима (train или val)
         mode_folder = os.path.join(root_dataset, mode)
@@ -262,7 +262,7 @@ class TAVIDataset(Dataset):
         keypoints = extract_points_from_json(json_path)
         
         # Создаем короткие пути для визуализации
-        # Например, из /home/knru/80lab/Gergent/TAVI_new/321814_Tavi_detection/0001/img/0001_001_001.png
+        # Например, из хххххххххххххххххххххххххххх/0001/img/0001_001_001.png
         # получаем 0001/img/0001_001_001.png
         parts_img = img_path.split('/')
         try:

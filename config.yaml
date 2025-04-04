@@ -1,5 +1,5 @@
 # Путь к предварительно разделенному датасету
-dataset_path: "/home/knru/80lab/Gergent/TAVI_new/TAVI_512_split/"
+dataset_path: "хххххххххххххх"
 
 # Параметры обучения
 batch_size: 8
