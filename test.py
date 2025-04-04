@@ -18,7 +18,22 @@ from dataset import all_keypoint_classes, image_size, original_image_size, extra
 
 def load_model(checkpoint_path, num_keypoints, device):
     """Загрузка обученной модели из чекпоинта"""
-    model = MultiHeadKeypointModel(num_keypoints)
+    # Определяем тип backbone из имени файла чекпоинта
+    backbone_name = 'resnet18'  # По умолчанию
+    
+    # Проверяем, есть ли в имени файла указание на тип backbone
+    checkpoint_filename = os.path.basename(checkpoint_path).lower()
+    
+    # Проверяем известные типы backbone
+    backbone_types = ['resnet18', 'resnet34', 'resnet50', 'vgg16', 'densenet121']
+    for backbone_type in backbone_types:
+        if backbone_type in checkpoint_filename:
+            backbone_name = backbone_type
+            break
+    
+    print(f"Используемый backbone: {backbone_name}")
+    model = MultiHeadKeypointModel(num_keypoints, backbone_name=backbone_name)
+    
     checkpoint = torch.load(checkpoint_path, map_location=device)
     model.load_state_dict(checkpoint['model_state_dict'])
     model.to(device)
@@ -198,8 +213,19 @@ def main():
     # Создаем директорию для результатов
     os.makedirs(args.output_dir, exist_ok=True)
     
-    # Получаем список всех JSON-файлов с аннотациями
-    json_files = sorted(glob.glob(os.path.join(args.folder, 'ann', '*.png.json')))
+    # Используем предварительно разделенный датасет
+    val_folder = os.path.join(config['dataset_path'], 'val')
+    print(f"Используем валидационные данные из: {val_folder}")
+    
+    # Получаем список всех папок в валидационном наборе
+    case_folders = sorted([f for f in glob.glob(os.path.join(val_folder, '*')) if os.path.isdir(f)])
+    
+    # Собираем все JSON-файлы из всех папок
+    json_files = []
+    for case_folder in case_folders:
+        case_json_files = sorted(glob.glob(os.path.join(case_folder, 'ann', '*.png.json')))
+        json_files.extend(case_json_files)
+    
     print(f"Найдено {len(json_files)} файлов с аннотациями")
     
     # Для хранения общих метрик
@@ -209,7 +235,11 @@ def main():
     for json_file in tqdm(json_files, desc="Обработка изображений"):
         # Получаем путь к изображению
         img_name = os.path.basename(json_file).replace('.json', '')
-        img_path = os.path.join(args.folder, 'img', img_name)
+        # Извлекаем путь к папке аннотаций
+        ann_dir = os.path.dirname(json_file)
+        # Заменяем 'ann' на 'img' в пути
+        img_dir = ann_dir.replace('ann', 'img')
+        img_path = os.path.join(img_dir, img_name)
         
         if not os.path.exists(img_path):
             print(f"Изображение не найдено: {img_path}")

@@ -1,0 +1,2602 @@
+{
+    "per_image": [
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 66.87661475532812,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_001_002.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 81.84201390792774,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_001_019.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 62.727798690879844,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_001_047.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 59.91003182743205,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_001_053.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 56.08991971108705,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_001_057.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 53.40615798638169,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_001_062.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 55.12951092836388,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_001_063.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 57.05885200977062,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_001_067.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 69.32042674845164,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_001_076.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 78.65208105960355,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_002_010.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 88.64603095835955,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_002_011.png"
+        },
+        {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1_score": 0.6666666666666666,
+            "avg_distance_error": 95.88046070681595,
+            "localization_accuracy": 0.0,
+            "total_points": 3,
+            "correct_points": 0,
+            "image": "0005_002_020.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 90.27823685358729,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_002_022.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 95.32581951199045,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_002_024.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 83.2065429424191,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_002_028.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 82.78800277327315,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_002_036.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 82.6615548734141,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_002_037.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 74.54789201379526,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_002_066.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 74.49383772162687,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_003_002.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 74.41697989023729,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_003_003.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 82.07476532682566,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_003_005.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 73.73508721269391,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_003_007.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 73.72426512308397,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_003_011.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 46.368266482192865,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_003_021.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 51.299818217782516,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_003_039.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 49.05891783942372,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_003_042.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 66.63893145787243,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_003_045.png"
+        },
+        {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1_score": 0.5,
+            "avg_distance_error": 42.46924869667295,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_005_006.png"
+        },
+        {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1_score": 0.5,
+            "avg_distance_error": 35.410736367825045,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_005_015.png"
+        },
+        {
+            "precision": 0.6,
+            "recall": 0.75,
+            "f1_score": 0.6666666666666666,
+            "avg_distance_error": 83.3363303303701,
+            "localization_accuracy": 0.0,
+            "total_points": 3,
+            "correct_points": 0,
+            "image": "0005_005_021.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 73.82847467417449,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_005_025.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 69.55116607861875,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_005_029.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 65.0111310512875,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_005_032.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 52.46183619407053,
+            "localization_accuracy": 0.25,
+            "total_points": 4,
+            "correct_points": 1,
+            "image": "0005_005_039.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 100.3735637698085,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_005_044.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 93.09388878384604,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0005_005_045.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 37.572089526518084,
+            "localization_accuracy": 0.0,
+            "total_points": 3,
+            "correct_points": 0,
+            "image": "0005_006_005.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 35.83464519429262,
+            "localization_accuracy": 0.0,
+            "total_points": 3,
+            "correct_points": 0,
+            "image": "0005_006_007.png"
+        },
+        {
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1_score": 0.75,
+            "avg_distance_error": 39.68174122155716,
+            "localization_accuracy": 0.0,
+            "total_points": 3,
+            "correct_points": 0,
+            "image": "0005_006_010.png"
+        },
+        {
+            "precision": 0.5,
+            "recall": 0.6666666666666666,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 42.492374535962526,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_006_019.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 22.35792246348224,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 3,
+            "correct_points": 1,
+            "image": "0005_006_024.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "f1_score": 0.6666666666666666,
+            "avg_distance_error": 54.70910861531343,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_006_029.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1_score": 0.8,
+            "avg_distance_error": 36.96061009357688,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_006_033.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 30.604780328623004,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 3,
+            "correct_points": 1,
+            "image": "0005_006_041.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 75.97138200409367,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_007_007.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 48.499306558204204,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_007_022.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 52.491819369320474,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_007_026.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 51.20508997870981,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_007_035.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 51.00991520291398,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_007_051.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 48.54135098057156,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_007_055.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 48.44256912501261,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_007_057.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 50.53658678468165,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_007_059.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 64.00715233852729,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0005_007_067.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 20.978052844349254,
+            "localization_accuracy": 0.5,
+            "total_points": 6,
+            "correct_points": 3,
+            "image": "0017_001_002.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 23.039310306291288,
+            "localization_accuracy": 0.5,
+            "total_points": 6,
+            "correct_points": 3,
+            "image": "0017_001_006.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 19.389813427935998,
+            "localization_accuracy": 0.6666666666666666,
+            "total_points": 6,
+            "correct_points": 4,
+            "image": "0017_001_013.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 19.645084230519227,
+            "localization_accuracy": 0.6666666666666666,
+            "total_points": 6,
+            "correct_points": 4,
+            "image": "0017_001_014.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 20.927000121616597,
+            "localization_accuracy": 0.6666666666666666,
+            "total_points": 6,
+            "correct_points": 4,
+            "image": "0017_001_046.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 20.5283153849777,
+            "localization_accuracy": 0.6666666666666666,
+            "total_points": 6,
+            "correct_points": 4,
+            "image": "0017_001_048.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 30.649815870566968,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0017_002_003.png"
+        },
+        {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1_score": 0.9090909090909091,
+            "avg_distance_error": 33.24524494771492,
+            "localization_accuracy": 0.4,
+            "total_points": 5,
+            "correct_points": 2,
+            "image": "0017_002_007.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 27.57576719737962,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0017_002_011.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 35.24519243570828,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0017_002_018.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 32.574459249742155,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0017_002_023.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 21.164218434226232,
+            "localization_accuracy": 0.5,
+            "total_points": 6,
+            "correct_points": 3,
+            "image": "0017_002_063.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 19.66881599646415,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0017_002_065.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 19.587708523071502,
+            "localization_accuracy": 0.6666666666666666,
+            "total_points": 6,
+            "correct_points": 4,
+            "image": "0017_003_023.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 26.607992668906103,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0017_003_064.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 38.63032671937196,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0017_003_082.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 28.353890945455873,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0017_003_088.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 32.924313101776676,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0017_003_096.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 28.781988537382954,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0017_003_099.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 18.63049227599138,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0017_003_116.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 25.855015418783967,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0017_003_135.png"
+        },
+        {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1_score": 0.9090909090909091,
+            "avg_distance_error": 37.45803697324958,
+            "localization_accuracy": 0.4,
+            "total_points": 5,
+            "correct_points": 2,
+            "image": "0017_004_003.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 20.446995576169645,
+            "localization_accuracy": 0.5,
+            "total_points": 6,
+            "correct_points": 3,
+            "image": "0017_004_028.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 19.860382957327566,
+            "localization_accuracy": 0.5,
+            "total_points": 6,
+            "correct_points": 3,
+            "image": "0017_004_060.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 28.22385796521456,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0017_004_077.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 35.88959669048723,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0017_004_170.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 21.7014958657075,
+            "localization_accuracy": 0.5,
+            "total_points": 6,
+            "correct_points": 3,
+            "image": "0017_005_004.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 43.559612819836644,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0017_005_006.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 30.977243187525687,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0017_005_025.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 42.516986488267584,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0017_005_029.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 27.698286509365257,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0017_005_037.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 24.061006557320898,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0017_007_010.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 18.11788709298652,
+            "localization_accuracy": 0.6,
+            "total_points": 5,
+            "correct_points": 3,
+            "image": "0017_007_013.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 8.046232478367605,
+            "localization_accuracy": 1.0,
+            "total_points": 5,
+            "correct_points": 5,
+            "image": "0017_009_001.png"
+        },
+        {
+            "precision": 0.8,
+            "recall": 0.5,
+            "f1_score": 0.6153846153846154,
+            "avg_distance_error": 76.78912466194551,
+            "localization_accuracy": 0.5,
+            "total_points": 4,
+            "correct_points": 2,
+            "image": "0017_017_003.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 26.005042173727627,
+            "localization_accuracy": 0.4,
+            "total_points": 5,
+            "correct_points": 2,
+            "image": "0017_017_009.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 19.916940726674053,
+            "localization_accuracy": 0.6,
+            "total_points": 5,
+            "correct_points": 3,
+            "image": "0017_017_016.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 26.970869915563487,
+            "localization_accuracy": 0.6,
+            "total_points": 5,
+            "correct_points": 3,
+            "image": "0017_017_033.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 19.665708388066477,
+            "localization_accuracy": 0.5,
+            "total_points": 6,
+            "correct_points": 3,
+            "image": "0017_024_007.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 25.194807750653165,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0017_024_018.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 17.351876860572307,
+            "localization_accuracy": 0.8333333333333334,
+            "total_points": 6,
+            "correct_points": 5,
+            "image": "0017_024_035.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 20.781570398152372,
+            "localization_accuracy": 0.6666666666666666,
+            "total_points": 6,
+            "correct_points": 4,
+            "image": "0017_024_047.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 21.949785435400546,
+            "localization_accuracy": 0.5,
+            "total_points": 6,
+            "correct_points": 3,
+            "image": "0017_024_056.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 16.13056538025183,
+            "localization_accuracy": 0.6666666666666666,
+            "total_points": 6,
+            "correct_points": 4,
+            "image": "0017_024_068.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 32.054154054734084,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0018_002_005.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 31.26207956668729,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0018_002_015.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 33.40544287082785,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0018_002_030.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 27.506073698339957,
+            "localization_accuracy": 0.4,
+            "total_points": 5,
+            "correct_points": 2,
+            "image": "0018_008_010.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 36.88014832404584,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0018_009_001.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 15.676195623917911,
+            "localization_accuracy": 0.8,
+            "total_points": 5,
+            "correct_points": 4,
+            "image": "0018_011_006.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 14.513377849089313,
+            "localization_accuracy": 0.6,
+            "total_points": 5,
+            "correct_points": 3,
+            "image": "0018_011_008.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 29.830059815040812,
+            "localization_accuracy": 0.0,
+            "total_points": 5,
+            "correct_points": 0,
+            "image": "0018_011_053.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 46.530039931867485,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0018_012_007.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 51.34153601571118,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0018_012_024.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 27.95057877153447,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0018_013_208.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 20.629256087107542,
+            "localization_accuracy": 0.6,
+            "total_points": 5,
+            "correct_points": 3,
+            "image": "0018_014_012.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 15.668087162709066,
+            "localization_accuracy": 0.8,
+            "total_points": 5,
+            "correct_points": 4,
+            "image": "0018_014_054.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 25.09390979359154,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0018_015_041.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 25.577298077027805,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0018_015_045.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 34.64436403307119,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0018_015_053.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 33.55409775116896,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0018_016_009.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 33.611728317239,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0018_016_015.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 21.075841794978828,
+            "localization_accuracy": 0.6,
+            "total_points": 5,
+            "correct_points": 3,
+            "image": "0018_016_019.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 37.64372829728093,
+            "localization_accuracy": 0.0,
+            "total_points": 5,
+            "correct_points": 0,
+            "image": "0018_016_038.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 51.011391846577276,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0018_018_014.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 47.43944528625469,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0018_018_015.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 50.98687868826624,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0024_001_002.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 30.494045673358134,
+            "localization_accuracy": 0.5,
+            "total_points": 2,
+            "correct_points": 1,
+            "image": "0024_001_007.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 41.75488292599307,
+            "localization_accuracy": 0.5,
+            "total_points": 2,
+            "correct_points": 1,
+            "image": "0024_001_011.png"
+        },
+        {
+            "precision": 0.4,
+            "recall": 0.5,
+            "f1_score": 0.4444444444444444,
+            "avg_distance_error": 58.40382539638384,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0024_001_015.png"
+        },
+        {
+            "precision": 0.4,
+            "recall": 0.5,
+            "f1_score": 0.4444444444444444,
+            "avg_distance_error": 52.75584548806469,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0024_001_019.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 46.640904535931355,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0024_001_021.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 26.71755046905072,
+            "localization_accuracy": 0.5,
+            "total_points": 2,
+            "correct_points": 1,
+            "image": "0024_001_046.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 75.82873602837192,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0024_003_003.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 70.88796028351497,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0024_003_004.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 79.15999565580174,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0024_003_008.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 90.79814696954273,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0024_004_021.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 102.0808502805605,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0024_004_024.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 91.79465855483097,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0024_004_026.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 66.63535320404077,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0024_006_035.png"
+        },
+        {
+            "precision": 0.4,
+            "recall": 0.5,
+            "f1_score": 0.4444444444444444,
+            "avg_distance_error": 50.658250295775915,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0024_006_041.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 80.81186700103835,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0024_007_004.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 74.80014902769787,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0024_007_021.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1_score": 0.75,
+            "avg_distance_error": 49.77672376213879,
+            "localization_accuracy": 0.0,
+            "total_points": 3,
+            "correct_points": 0,
+            "image": "0024_008_003.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1_score": 0.75,
+            "avg_distance_error": 50.567767948288044,
+            "localization_accuracy": 0.0,
+            "total_points": 3,
+            "correct_points": 0,
+            "image": "0024_008_039.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 24.57660609676177,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0024_010_039.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 30.90319377592641,
+            "localization_accuracy": 0.0,
+            "total_points": 3,
+            "correct_points": 0,
+            "image": "0024_010_045.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 32.04699362254838,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0026_001_003.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 35.39977758316177,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0026_001_012.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 30.78923735382985,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0026_001_022.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 25.70236960085471,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0026_001_027.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 26.309600969263727,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0026_001_028.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 30.32909437081582,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0026_001_029.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 48.165854903502094,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0026_001_032.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 34.1235595294495,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0026_001_042.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 31.839569538279946,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0026_001_047.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.42857142857142855,
+            "f1_score": 0.6,
+            "avg_distance_error": 37.82200457247833,
+            "localization_accuracy": 0.0,
+            "total_points": 3,
+            "correct_points": 0,
+            "image": "0026_004_009.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.42857142857142855,
+            "f1_score": 0.6,
+            "avg_distance_error": 37.854571094506035,
+            "localization_accuracy": 0.0,
+            "total_points": 3,
+            "correct_points": 0,
+            "image": "0026_004_017.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.42857142857142855,
+            "f1_score": 0.6,
+            "avg_distance_error": 32.9787808135794,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 3,
+            "correct_points": 1,
+            "image": "0026_004_022.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 28.910092030141147,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0026_006_041.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 32.77745602143245,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0026_006_042.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 27.665543897493368,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0029_002_029.png"
+        },
+        {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1_score": 0.9090909090909091,
+            "avg_distance_error": 35.559819141979276,
+            "localization_accuracy": 0.0,
+            "total_points": 5,
+            "correct_points": 0,
+            "image": "0029_002_032.png"
+        },
+        {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1_score": 0.9090909090909091,
+            "avg_distance_error": 61.986456620939826,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0029_002_034.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 32.736768996047005,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0029_002_036.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 35.37008113354778,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0029_002_053.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 31.535952022762455,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0029_002_056.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 37.89063365244717,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0029_002_062.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 43.02109125839018,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0029_004_031.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 40.694130230730586,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0029_004_035.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 53.64732284982176,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0029_004_043.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 49.15179762761459,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0029_004_046.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 27.89339656977204,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0029_006_024.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 28.583257825490307,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0029_006_026.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 31.551539563611176,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0029_006_027.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 33.08926992638064,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0029_006_032.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 29.366501902005968,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0029_008_069.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 24.989662387017535,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0029_008_102.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 19.077395325510135,
+            "localization_accuracy": 0.5,
+            "total_points": 6,
+            "correct_points": 3,
+            "image": "0029_008_136.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 28.8886769351189,
+            "localization_accuracy": 0.25,
+            "total_points": 4,
+            "correct_points": 1,
+            "image": "0031_001_003.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 31.97974956630827,
+            "localization_accuracy": 0.25,
+            "total_points": 4,
+            "correct_points": 1,
+            "image": "0031_001_010.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 31.09431878442198,
+            "localization_accuracy": 0.25,
+            "total_points": 4,
+            "correct_points": 1,
+            "image": "0031_001_014.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 24.17131668875434,
+            "localization_accuracy": 0.5,
+            "total_points": 4,
+            "correct_points": 2,
+            "image": "0031_001_015.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 12.00816917645352,
+            "localization_accuracy": 0.75,
+            "total_points": 4,
+            "correct_points": 3,
+            "image": "0031_001_016.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 21.912802176597562,
+            "localization_accuracy": 0.75,
+            "total_points": 4,
+            "correct_points": 3,
+            "image": "0031_001_020.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 32.99847344146954,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0031_001_036.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 39.86964097970245,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0031_001_045.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 39.84096314815041,
+            "localization_accuracy": 0.25,
+            "total_points": 4,
+            "correct_points": 1,
+            "image": "0031_001_051.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 31.00820990982499,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0031_002_025.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 39.52830153690483,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0031_002_034.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 43.1743044619227,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0031_002_039.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1_score": 0.5714285714285714,
+            "avg_distance_error": 19.38094962092731,
+            "localization_accuracy": 0.5,
+            "total_points": 2,
+            "correct_points": 1,
+            "image": "0031_003_013.png"
+        },
+        {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1_score": 0.5,
+            "avg_distance_error": 19.741920396493967,
+            "localization_accuracy": 0.5,
+            "total_points": 2,
+            "correct_points": 1,
+            "image": "0031_003_020.png"
+        },
+        {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1_score": 0.5,
+            "avg_distance_error": 36.1053923433168,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0031_003_030.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 60.53454531530263,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0031_004_042.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 53.78038861941356,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0031_004_046.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 42.58861844447443,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0031_004_051.png"
+        },
+        {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1_score": 0.5,
+            "avg_distance_error": 19.300514708006084,
+            "localization_accuracy": 0.5,
+            "total_points": 2,
+            "correct_points": 1,
+            "image": "0031_006_009.png"
+        },
+        {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1_score": 0.5,
+            "avg_distance_error": 47.3892444220047,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0031_006_027.png"
+        },
+        {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1_score": 0.5,
+            "avg_distance_error": 46.27745942288267,
+            "localization_accuracy": 0.0,
+            "total_points": 2,
+            "correct_points": 0,
+            "image": "0031_006_032.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 37.65776754751637,
+            "localization_accuracy": 0.25,
+            "total_points": 4,
+            "correct_points": 1,
+            "image": "0031_007_030.png"
+        },
+        {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8,
+            "avg_distance_error": 53.73783015120045,
+            "localization_accuracy": 0.0,
+            "total_points": 4,
+            "correct_points": 0,
+            "image": "0031_007_046.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 43.62413376522392,
+            "localization_accuracy": 0.0,
+            "total_points": 3,
+            "correct_points": 0,
+            "image": "0031_013_042.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 46.721314788953066,
+            "localization_accuracy": 0.0,
+            "total_points": 3,
+            "correct_points": 0,
+            "image": "0031_013_043.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 47.823257935443614,
+            "localization_accuracy": 0.0,
+            "total_points": 3,
+            "correct_points": 0,
+            "image": "0031_013_044.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 23.074625846910095,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0036_002_012.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 19.06756500457871,
+            "localization_accuracy": 0.4,
+            "total_points": 5,
+            "correct_points": 2,
+            "image": "0036_002_015.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 28.228596118075366,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0036_002_022.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 25.714885499552913,
+            "localization_accuracy": 0.4,
+            "total_points": 5,
+            "correct_points": 2,
+            "image": "0036_002_023.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 26.903813536544845,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0036_002_026.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 27.365516069434342,
+            "localization_accuracy": 0.0,
+            "total_points": 5,
+            "correct_points": 0,
+            "image": "0036_002_029.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 29.17609763374073,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0036_002_032.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 25.098017385456036,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0036_002_033.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 13.267233447040404,
+            "localization_accuracy": 0.8333333333333334,
+            "total_points": 6,
+            "correct_points": 5,
+            "image": "0036_003_002.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 12.030235229363212,
+            "localization_accuracy": 1.0,
+            "total_points": 6,
+            "correct_points": 6,
+            "image": "0036_003_011.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 15.18904234531218,
+            "localization_accuracy": 0.6666666666666666,
+            "total_points": 6,
+            "correct_points": 4,
+            "image": "0036_003_018.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 12.023426268913681,
+            "localization_accuracy": 0.8333333333333334,
+            "total_points": 6,
+            "correct_points": 5,
+            "image": "0036_003_026.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 12.792319480946388,
+            "localization_accuracy": 0.8333333333333334,
+            "total_points": 6,
+            "correct_points": 5,
+            "image": "0036_003_045.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 15.288804782411887,
+            "localization_accuracy": 0.8333333333333334,
+            "total_points": 6,
+            "correct_points": 5,
+            "image": "0036_003_048.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 15.906068593951936,
+            "localization_accuracy": 0.6666666666666666,
+            "total_points": 6,
+            "correct_points": 4,
+            "image": "0036_003_063.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 11.081156713915407,
+            "localization_accuracy": 1.0,
+            "total_points": 6,
+            "correct_points": 6,
+            "image": "0036_003_066.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 11.03017510528017,
+            "localization_accuracy": 1.0,
+            "total_points": 6,
+            "correct_points": 6,
+            "image": "0036_003_067.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 18.807018943165613,
+            "localization_accuracy": 0.6,
+            "total_points": 5,
+            "correct_points": 3,
+            "image": "0036_006_001.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 20.294610390206206,
+            "localization_accuracy": 0.8,
+            "total_points": 5,
+            "correct_points": 4,
+            "image": "0036_006_012.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 16.957227815770455,
+            "localization_accuracy": 0.8,
+            "total_points": 5,
+            "correct_points": 4,
+            "image": "0036_006_013.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 12.242320237401099,
+            "localization_accuracy": 1.0,
+            "total_points": 5,
+            "correct_points": 5,
+            "image": "0036_006_022.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 16.122457119753978,
+            "localization_accuracy": 0.8,
+            "total_points": 5,
+            "correct_points": 4,
+            "image": "0036_006_025.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 14.676259068952879,
+            "localization_accuracy": 0.8,
+            "total_points": 5,
+            "correct_points": 4,
+            "image": "0036_006_030.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 15.070594412121613,
+            "localization_accuracy": 0.6,
+            "total_points": 5,
+            "correct_points": 3,
+            "image": "0036_006_035.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 19.538081282319467,
+            "localization_accuracy": 0.6,
+            "total_points": 5,
+            "correct_points": 3,
+            "image": "0036_006_043.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1_score": 0.8333333333333334,
+            "avg_distance_error": 20.972615170388924,
+            "localization_accuracy": 0.4,
+            "total_points": 5,
+            "correct_points": 2,
+            "image": "0036_006_045.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 14.644150446956145,
+            "localization_accuracy": 0.8333333333333334,
+            "total_points": 6,
+            "correct_points": 5,
+            "image": "0036_007_005.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 30.817124951245916,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0036_007_012.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 20.492550310264335,
+            "localization_accuracy": 0.5,
+            "total_points": 6,
+            "correct_points": 3,
+            "image": "0036_007_020.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 24.293495013901495,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0036_007_028.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 19.446482108535584,
+            "localization_accuracy": 0.6666666666666666,
+            "total_points": 6,
+            "correct_points": 4,
+            "image": "0036_007_034.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 23.20731028673946,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0036_007_053.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 15.889793245011171,
+            "localization_accuracy": 0.8333333333333334,
+            "total_points": 6,
+            "correct_points": 5,
+            "image": "0036_007_058.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 34.66299412351441,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0036_007_061.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 28.413563542298192,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0036_007_066.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 22.560558401477277,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0036_008_002.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 25.846797570839353,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0036_008_007.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 26.520038845752154,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0036_008_008.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 22.626661104072024,
+            "localization_accuracy": 0.5,
+            "total_points": 6,
+            "correct_points": 3,
+            "image": "0036_008_011.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 21.793324049707362,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0036_008_034.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 9.728138032170778,
+            "localization_accuracy": 0.8333333333333334,
+            "total_points": 6,
+            "correct_points": 5,
+            "image": "0036_008_040.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 20.332511651098937,
+            "localization_accuracy": 0.5,
+            "total_points": 6,
+            "correct_points": 3,
+            "image": "0036_008_043.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 27.566338383781403,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0036_008_056.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 23.758260355533995,
+            "localization_accuracy": 0.3333333333333333,
+            "total_points": 6,
+            "correct_points": 2,
+            "image": "0036_008_059.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 26.48040041276455,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0036_011_007.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 13.37846918698205,
+            "localization_accuracy": 0.8,
+            "total_points": 5,
+            "correct_points": 4,
+            "image": "0036_011_020.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 22.81507328438766,
+            "localization_accuracy": 0.4,
+            "total_points": 5,
+            "correct_points": 2,
+            "image": "0036_011_027.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 16.90892872602688,
+            "localization_accuracy": 0.6,
+            "total_points": 5,
+            "correct_points": 3,
+            "image": "0036_011_029.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 21.472123406252898,
+            "localization_accuracy": 0.4,
+            "total_points": 5,
+            "correct_points": 2,
+            "image": "0036_011_040.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 24.619176781717925,
+            "localization_accuracy": 0.2,
+            "total_points": 5,
+            "correct_points": 1,
+            "image": "0036_011_045.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 20.219135146469593,
+            "localization_accuracy": 0.4,
+            "total_points": 5,
+            "correct_points": 2,
+            "image": "0036_011_050.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 18.957308375780688,
+            "localization_accuracy": 0.6,
+            "total_points": 5,
+            "correct_points": 3,
+            "image": "0036_011_056.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 18.27262729313911,
+            "localization_accuracy": 0.6,
+            "total_points": 5,
+            "correct_points": 3,
+            "image": "0036_011_058.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 14.426086681219559,
+            "localization_accuracy": 0.8333333333333334,
+            "total_points": 6,
+            "correct_points": 5,
+            "image": "0036_014_111.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 22.007912100374487,
+            "localization_accuracy": 0.5,
+            "total_points": 6,
+            "correct_points": 3,
+            "image": "0036_014_181.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 25.713455960581573,
+            "localization_accuracy": 0.16666666666666666,
+            "total_points": 6,
+            "correct_points": 1,
+            "image": "0036_014_182.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 41.58110771036675,
+            "localization_accuracy": 0.0,
+            "total_points": 6,
+            "correct_points": 0,
+            "image": "0036_014_208.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 19.939099778133546,
+            "localization_accuracy": 0.6666666666666666,
+            "total_points": 6,
+            "correct_points": 4,
+            "image": "0036_014_221.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 18.295605751107683,
+            "localization_accuracy": 0.6666666666666666,
+            "total_points": 6,
+            "correct_points": 4,
+            "image": "0036_014_224.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 21.623731706250158,
+            "localization_accuracy": 0.6666666666666666,
+            "total_points": 6,
+            "correct_points": 4,
+            "image": "0036_014_228.png"
+        },
+        {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_distance_error": 19.512970979612646,
+            "localization_accuracy": 0.5,
+            "total_points": 6,
+            "correct_points": 3,
+            "image": "0036_014_246.png"
+        }
+    ],
+    "average": {
+        "precision": 0.874002574002574,
+        "recall": 0.8803916161059018,
+        "f1_score": 0.8648900006042863,
+        "avg_distance_error": 37.69344908396769,
+        "localization_accuracy": 0.2540540540540541,
+        "total_images": 259
+    }
+}

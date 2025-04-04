@@ -138,8 +138,8 @@ class GroupKeypointModel(nn.Module):
 
 # Для обратной совместимости с существующим кодом
 class MultiHeadKeypointModel(GroupKeypointModel):
-    def __init__(self, num_keypoints):
-        super(MultiHeadKeypointModel, self).__init__()
+    def __init__(self, num_keypoints, backbone_name='resnet18'):
+        super(MultiHeadKeypointModel, self).__init__(backbone_name=backbone_name)
         
     def forward(self, x):
         output = super(MultiHeadKeypointModel, self).forward(x)

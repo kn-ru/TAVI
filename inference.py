@@ -13,7 +13,22 @@ from dataset import all_keypoint_classes, image_size, original_image_size
 
 def load_model(checkpoint_path, num_keypoints, device):
     """Загрузка обученной модели из чекпоинта"""
-    model = MultiHeadKeypointModel(num_keypoints)
+    # Определяем тип backbone из имени файла чекпоинта
+    backbone_name = 'resnet18'  # По умолчанию
+    
+    # Проверяем, есть ли в имени файла указание на тип backbone
+    checkpoint_filename = os.path.basename(checkpoint_path).lower()
+    
+    # Проверяем известные типы backbone
+    backbone_types = ['resnet18', 'resnet34', 'resnet50', 'vgg16', 'densenet121']
+    for backbone_type in backbone_types:
+        if backbone_type in checkpoint_filename:
+            backbone_name = backbone_type
+            break
+    
+    print(f"Используемый backbone: {backbone_name}")
+    model = MultiHeadKeypointModel(num_keypoints, backbone_name=backbone_name)
+    
     checkpoint = torch.load(checkpoint_path, map_location=device)
     model.load_state_dict(checkpoint['model_state_dict'])
     model.to(device)
