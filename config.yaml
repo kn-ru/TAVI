@@ -3,6 +3,7 @@ dataset_path: "/home/knru/80lab/Gergent/TAVI_new/TAVI_512_split/"
 
 # Параметры модели
 backbone_name: "resnet18"  # Выберите более легкую модель для работы с 512x512 (resnet18, resnet34, vgg16, densenet121)
+hrnet_width: 18  # Ширина каналов в HRNet (меньше значение - меньше памяти, возможные значения: 18, 32, 48)
 
 # Параметры обучения
 batch_size: 4  # Уменьшаем размер батча для экономии памяти
