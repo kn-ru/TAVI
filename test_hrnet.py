@@ -9,7 +9,7 @@ matplotlib.use('Agg')  # Используем Agg бэкенд для работ
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 
-from dataset import KeypointDataset
+from dataset import TAVIDataset, all_keypoint_classes
 from hrnet_model import HRNetKeypointModel
 from visualization import create_batch_visualization
 
@@ -66,21 +66,21 @@ def calculate_metrics(pred_keypoints, gt_keypoints, distance_threshold=0.05):
     }
 
 def test(config):
-    # Инициализируем тестовый датасет
-    test_dataset = KeypointDataset(
-        config['test_dir'],
-        augmentation=False,
-        img_size=config['img_size']
+    # Инициализируем валидационный датасет
+    val_dataset = TAVIDataset(
+        config['dataset_path'],
+        mode='val',
+        transform=None
     )
     
-    test_loader = DataLoader(
-        test_dataset,
+    val_loader = DataLoader(
+        val_dataset,
         batch_size=config['batch_size'],
         shuffle=False,
         num_workers=config['num_workers']
     )
     
-    print(f"Test samples: {len(test_dataset)}")
+    print(f"Validation samples: {len(val_dataset)}")
     
     # Инициализируем модель HRNet
     model = HRNetKeypointModel(width=config.get('hrnet_width', 32))
@@ -109,9 +109,12 @@ def test(config):
     results_dir = os.path.join(config['results_dir'], 'hrnet')
     os.makedirs(results_dir, exist_ok=True)
     
-    # Проходим по тестовому датасету
+    # Проходим по валидационному датасету
     with torch.no_grad():
-        for batch_idx, (images, keypoints, group_labels) in enumerate(tqdm(test_loader, desc="Testing")):
+        for batch_idx, batch_data in enumerate(tqdm(val_loader, desc="Validation")):
+            images = batch_data['image']
+            keypoints = batch_data['keypoints']
+            group_labels = batch_data.get('group_labels', None)
             images = images.to(device)
             keypoints = keypoints.to(device)
             
@@ -145,7 +148,7 @@ def test(config):
     }
     
     # Выводим результаты
-    print("\nTest Results (HRNet):")
+    print("\nValidation Results (HRNet):")
     print(f"Precision: {avg_metrics['precision']:.4f}")
     print(f"Recall: {avg_metrics['recall']:.4f}")
     print(f"F1 Score: {avg_metrics['f1_score']:.4f}")
@@ -164,8 +167,9 @@ if __name__ == "__main__":
     with open('config.yaml', 'r') as f:
         config = yaml.safe_load(f)
     
-    # Добавляем параметры для HRNet
-    config['hrnet_width'] = 32  # Ширина каналов в HRNet
+    # Добавляем параметры для HRNet, если их нет в конфиге
+    if 'hrnet_width' not in config:
+        config['hrnet_width'] = 18  # Ширина каналов в HRNet
     config['results_dir'] = 'results'  # Директория для сохранения результатов
     
     # Создаем директорию для результатов, если она не существует

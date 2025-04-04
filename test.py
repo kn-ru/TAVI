@@ -177,8 +177,6 @@ def main():
     parser = argparse.ArgumentParser(description='Тестирование модели обнаружения ключевых точек')
     parser.add_argument('--config', type=str, default='config.yaml', help='Путь к конфигурационному файлу')
     parser.add_argument('--checkpoint', type=str, default='checkpoints/best_model.pth', help='Путь к чекпоинту модели')
-    parser.add_argument('--folder', type=str, default='/home/knru/80lab/Gergent/TAVI_new/321814_Tavi_detection/0001/', 
-                        help='Путь к папке с тестовыми изображениями')
     parser.add_argument('--output_dir', type=str, default='test_results', help='Папка для сохранения результатов')
     parser.add_argument('--threshold', type=float, default=0.5, help='Порог вероятности для фильтрации точек')
     parser.add_argument('--distance_threshold', type=float, default=20, 
