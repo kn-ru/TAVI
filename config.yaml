@@ -1,0 +1,35 @@
+# Путь к датасету
+dataset_path: "/home/knru/80lab/Gergent/TAVI_new/321814_Tavi_detection/"
+
+# Параметры обучения
+batch_size: 8
+learning_rate: 0.001
+epochs: 150
+num_workers: 4
+
+# Директория для сохранения чекпоинтов
+checkpoint_dir: "checkpoints"
+
+# Общее количество ключевых точек (1 точка из group_1, 6 из group_2, 3 из group_3)
+num_keypoints: 10
+
+# Коэффициент для взвешивания лосса по координатам (увеличен для усиления штрафа за ошибки локализации)
+lambda_coord: 5.0
+
+# Коэффициент для взвешивания лосса по классификации групп
+lambda_group: 0.5
+
+# Использовать Wing Loss вместо L1 для более точной локализации
+use_wing_loss: true
+
+# Параметры визуализации
+visualization:
+  # Сохранять ли визуализацию батча в процессе обучения
+  save_batch_images: true
+  # Максимальное количество изображений в коллаже
+  max_images: 16
+  # Директория для сохранения визуализаций
+  output_dir: "visualizations"
+
+# Название эксперимента для TensorBoard
+experiment_name: "keypoint_detection_v2"
