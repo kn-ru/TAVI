@@ -29,6 +29,8 @@ checkpoints/
 
 # Исключения - разрешаем пушить sample.png
 !sample.png
+!demo/sample.png
+!demo/output.png
 
 # Virtual environment
 venv/
