@@ -27,6 +27,13 @@ checkpoints/
 *.jpeg
 *.gif
 
+# Разрешаем файлы в папке demo
+!demo/
+!demo/*.png
+!demo/*.jpg
+!demo/*.jpeg
+!demo/*.gif
+
 # Virtual environment
 venv/
 env/
