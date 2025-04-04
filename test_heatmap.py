@@ -13,7 +13,7 @@ from tqdm import tqdm
 from dataset import TAVIDataset, all_keypoint_classes
 from heatmap_model import HeatmapKeypointModel
 
-def calculate_metrics(pred_keypoints, gt_keypoints, distance_threshold=0.05):
+def calculate_metrics(pred_keypoints, gt_keypoints, distance_threshold=0.05, image_size=(512, 512)):
     """
     Вычисляет метрики для оценки качества предсказания ключевых точек.
     
@@ -32,9 +32,14 @@ def calculate_metrics(pred_keypoints, gt_keypoints, distance_threshold=0.05):
     true_positives = 0
     false_positives = 0
     false_negatives = 0
-    total_distance_error = 0
+    total_distance_error = 0  # в нормализованных координатах
+    total_distance_error_px = 0  # в пикселях
     total_points = 0
     points_within_threshold = 0
+    points_within_px_threshold = 0
+    
+    # Порог в пикселях (например, 5 пикселей)
+    px_threshold = 5.0
     
     # Вычисляем метрики для каждой точки
     for b in range(batch_size):
@@ -47,13 +52,25 @@ def calculate_metrics(pred_keypoints, gt_keypoints, distance_threshold=0.05):
                 gt_x, gt_y = gt_keypoints[b, k, 1], gt_keypoints[b, k, 2]
                 pred_x, pred_y = pred_keypoints[b, k, 1], pred_keypoints[b, k, 2]
                 
+                # Расстояние в нормализованных координатах [0,1]
                 distance = torch.sqrt((gt_x - pred_x)**2 + (gt_y - pred_y)**2)
                 
+                # Расстояние в пикселях
+                gt_x_px = gt_x * image_size[1]  # width
+                gt_y_px = gt_y * image_size[0]  # height
+                pred_x_px = pred_x * image_size[1]
+                pred_y_px = pred_y * image_size[0]
+                distance_px = torch.sqrt((gt_x_px - pred_x_px)**2 + (gt_y_px - pred_y_px)**2)
+                
                 total_distance_error += distance.item()
+                total_distance_error_px += distance_px.item()
                 total_points += 1
                 
                 if distance < distance_threshold:
                     points_within_threshold += 1
+                    
+                if distance_px < px_threshold:
+                    points_within_px_threshold += 1
                 
                 true_positives += 1
             elif gt_present and not pred_present:
@@ -67,19 +84,24 @@ def calculate_metrics(pred_keypoints, gt_keypoints, distance_threshold=0.05):
     f1_score = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
     
     avg_distance_error = total_distance_error / total_points if total_points > 0 else 0
+    avg_distance_error_px = total_distance_error_px / total_points if total_points > 0 else 0
     localization_accuracy = points_within_threshold / total_points if total_points > 0 else 0
+    localization_accuracy_px = points_within_px_threshold / total_points if total_points > 0 else 0
     
     return {
         'precision': precision,
         'recall': recall,
         'f1_score': f1_score,
         'avg_distance_error': avg_distance_error,
+        'avg_distance_error_px': avg_distance_error_px,
         'localization_accuracy': localization_accuracy,
+        'localization_accuracy_px': localization_accuracy_px,
         'true_positives': true_positives,
         'false_positives': false_positives,
         'false_negatives': false_negatives,
         'total_points': total_points,
-        'points_within_threshold': points_within_threshold
+        'points_within_threshold': points_within_threshold,
+        'points_within_px_threshold': points_within_px_threshold
     }
 
 def test(config):
@@ -136,7 +158,7 @@ def test(config):
     
     # Проходим по тестовому датасету
     with torch.no_grad():
-        for batch_idx, (images, keypoints) in enumerate(tqdm(test_loader, desc="Testing")):
+        for batch_idx, (images, keypoints, img_paths) in enumerate(tqdm(test_loader, desc="Testing")):
             images = images.to(device)
             keypoints = keypoints.to(device)
             
@@ -170,12 +192,15 @@ def test(config):
         'recall': np.mean([m['recall'] for m in all_metrics]),
         'f1_score': np.mean([m['f1_score'] for m in all_metrics]),
         'avg_distance_error': np.mean([m['avg_distance_error'] for m in all_metrics]),
+        'avg_distance_error_px': np.mean([m['avg_distance_error_px'] for m in all_metrics]),
         'localization_accuracy': np.mean([m['localization_accuracy'] for m in all_metrics]),
+        'localization_accuracy_px': np.mean([m['localization_accuracy_px'] for m in all_metrics]),
         'true_positives': sum([m['true_positives'] for m in all_metrics]),
         'false_positives': sum([m['false_positives'] for m in all_metrics]),
         'false_negatives': sum([m['false_negatives'] for m in all_metrics]),
         'total_points': sum([m['total_points'] for m in all_metrics]),
-        'points_within_threshold': sum([m['points_within_threshold'] for m in all_metrics])
+        'points_within_threshold': sum([m['points_within_threshold'] for m in all_metrics]),
+        'points_within_px_threshold': sum([m['points_within_px_threshold'] for m in all_metrics])
     }
     
     # Выводим результаты
@@ -183,8 +208,10 @@ def test(config):
     print(f"Precision: {avg_metrics['precision']:.4f}")
     print(f"Recall: {avg_metrics['recall']:.4f}")
     print(f"F1 Score: {avg_metrics['f1_score']:.4f}")
-    print(f"Average Distance Error: {avg_metrics['avg_distance_error']:.4f}")
-    print(f"Localization Accuracy: {avg_metrics['localization_accuracy']:.4f}")
+    print(f"Average Distance Error: {avg_metrics['avg_distance_error']:.4f} (normalized)")
+    print(f"Average Distance Error: {avg_metrics['avg_distance_error_px']:.2f} pixels")
+    print(f"Localization Accuracy: {avg_metrics['localization_accuracy']:.4f} (threshold: 0.05)")
+    print(f"Localization Accuracy: {avg_metrics['localization_accuracy_px']:.4f} (threshold: 5 pixels)")
     print(f"True Positives: {avg_metrics['true_positives']}")
     print(f"False Positives: {avg_metrics['false_positives']}")
     print(f"False Negatives: {avg_metrics['false_negatives']}")
