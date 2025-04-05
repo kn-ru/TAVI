@@ -25,7 +25,7 @@ def load_model(checkpoint_path, num_keypoints, device):
     checkpoint_filename = os.path.basename(checkpoint_path).lower()
     
     # Проверяем известные типы backbone
-    backbone_types = ['resnet18', 'resnet34', 'resnet50', 'vgg16', 'densenet121']
+    backbone_types = ['resnet18', 'resnet34', 'resnet50', 'vgg16', 'densenet121', 'efficientnet_b7']
     for backbone_type in backbone_types:
         if backbone_type in checkpoint_filename:
             backbone_name = backbone_type

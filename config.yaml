@@ -1,5 +1,5 @@
 # Путь к датасету
-dataset_path: "xxxxxxxxxxxxxx"
+dataset_path: "/home/knru/80lab/Gergent/TAVI_new/TAVI_512_split"
 
 # Параметры модели
 backbone_name: "resnet18"  # Выберите более легкую модель для работы с 512x512 (resnet18, resnet34, vgg16, densenet121)
