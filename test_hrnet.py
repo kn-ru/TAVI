@@ -47,9 +47,12 @@ def calculate_metrics(pred_keypoints, gt_keypoints, distance_threshold=0.05):
         avg_distance_error = 0.0
         localization_accuracy = 0.0
     else:
+        # Получаем индексы, где mask == True
+        batch_indices, keypoint_indices = torch.where(mask)
+        
         # Вычисляем евклидово расстояние между предсказанными и ground truth координатами
-        pred_coords = pred_keypoints[mask, 1:3]
-        gt_coords = gt_keypoints[mask, 1:3]
+        pred_coords = pred_keypoints[batch_indices, keypoint_indices, 1:3]
+        gt_coords = gt_keypoints[batch_indices, keypoint_indices, 1:3]
         
         distances = torch.sqrt(torch.sum((pred_coords - gt_coords) ** 2, dim=1))
         avg_distance_error = torch.mean(distances).item()
@@ -86,7 +89,7 @@ def test(config):
     model = HRNetKeypointModel(width=config.get('hrnet_width', 32))
     
     # Загружаем веса модели
-    checkpoint_path = os.path.join(config['checkpoint_dir'], 'best_hrnet_model.pth')
+    checkpoint_path = os.path.join(config['checkpoint_dir'], 'hrnet.pth')
     if os.path.exists(checkpoint_path):
         checkpoint = torch.load(checkpoint_path)
         model.load_state_dict(checkpoint['model_state_dict'])
@@ -112,9 +115,8 @@ def test(config):
     # Проходим по валидационному датасету
     with torch.no_grad():
         for batch_idx, batch_data in enumerate(tqdm(val_loader, desc="Validation")):
-            images = batch_data['image']
-            keypoints = batch_data['keypoints']
-            group_labels = batch_data.get('group_labels', None)
+            images, keypoints = batch_data
+            group_labels = None  # В данном случае group_labels не используются
             images = images.to(device)
             keypoints = keypoints.to(device)
             
@@ -127,16 +129,20 @@ def test(config):
             all_metrics.append(batch_metrics)
             
             # Сохраняем визуализацию для первых нескольких батчей
-            if batch_idx < config['visualization']['max_batches']:
-                batch_vis = create_batch_visualization(
+            # Проверяем наличие ключей в конфигурации и устанавливаем значения по умолчанию
+            vis_config = config.get('visualization', {})
+            max_batches = vis_config.get('max_batches', 3)  # По умолчанию 3 батча
+            max_images = vis_config.get('max_images', 4)    # По умолчанию 4 изображения
+            
+            if batch_idx < max_batches:
+                vis_path = os.path.join(results_dir, f'batch_{batch_idx}_hrnet.png')
+                create_batch_visualization(
                     images.cpu(),
                     keypoints.cpu(),
                     pred_keypoints.cpu(),
-                    max_images=config['visualization']['max_images']
+                    save_path=vis_path,
+                    max_images=max_images
                 )
-                vis_path = os.path.join(results_dir, f'batch_{batch_idx}_hrnet.png')
-                batch_vis.savefig(vis_path)
-                plt.close(batch_vis)
     
     # Вычисляем средние метрики
     avg_metrics = {

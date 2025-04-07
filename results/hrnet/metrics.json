@@ -1,0 +1,7 @@
+{
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "avg_distance_error": 0.08046073604088563,
+    "localization_accuracy": 0.3160989267321733
+}
